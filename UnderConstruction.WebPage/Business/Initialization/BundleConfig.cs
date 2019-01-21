@@ -44,8 +44,9 @@ namespace UnderConstruction.WebPage.Business.Initialization
                 .Include("~/Static/css/bootsnav.css", new CssRewriteUrlTransform())
                 .Include("~/Static/css/custom.css", new CssRewriteUrlTransform());
 
+            styles.EnableFileExtensionReplacements = false;
             bundles.Add(styles);
-
+            
 #if !DEBUG
             BundleTable.EnableOptimizations = true;
 #endif
