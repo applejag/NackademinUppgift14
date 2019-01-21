@@ -234,7 +234,6 @@
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\EPiServerDB_658e82f3.mdf" />
@@ -297,6 +296,7 @@
     <Content Include="Static\font\GillSansMT-UltraBold.eot" />
     <Content Include="Static\font\GillSansMT-UltraBold.ttf" />
     <Content Include="Static\font\GillSansMT-UltraBold.woff" />
+    <Content Include="Views\Shared\Layouts\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
