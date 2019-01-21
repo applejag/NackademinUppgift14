@@ -4,11 +4,11 @@ using UnderConstruction.WebPage.Models.Pages;
 
 namespace UnderConstruction.WebPage.Models.ViewModels
 {
-    public interface IPageViewModel<T> where T : SitePageData
+    public interface IPageViewModel<out T> where T : SitePageData
     {
-        T CurrentPage { get; set; }
-        IEnumerable<SitePageData> MenuPages { get; set; }
-        IContent Section { get; set; }
-        StartPage StartPage { get; set; }
+        T CurrentPage { get; }
+        IEnumerable<SitePageData> MenuPages { get; }
+        IContent Section { get; }
+        StartPage StartPage { get; }
     }
 }
