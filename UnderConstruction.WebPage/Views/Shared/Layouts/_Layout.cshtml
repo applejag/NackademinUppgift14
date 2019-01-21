@@ -1,4 +1,5 @@
-﻿@model IPageViewModel<SitePageData>
+﻿@using System.Web.Optimization
+@model IPageViewModel<SitePageData>
 
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -10,18 +11,7 @@
     <title>Construction</title>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Static/css/fonts.css")" />
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Static/libs/bootstrap/css/bootstrap.min.css")" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Static/libs/font-awesome/css/font-awesome.min.css")" />
-    <!-- Bootsnav -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Static/css/bootsnav.css")" />
-    <!-- Fancybox -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Static/libs/jquery.fancybox/jquery.fancybox.min.css")" media="screen" />
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Static/css/custom.css")" />
+    @Styles.Render("~/Bundles/css")
     <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -458,21 +448,8 @@
             </p>
         </div><!-- Footer bottom end -->
     </footer><!-- Footer end -->
-    <!-- JavaScript -->
-    <script type="text/javascript" src="@Url.Content("~/Static/libs/jquery/jquery.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Static/libs/bootstrap/js/bootstrap.js")"></script>
 
-    <!-- Bootsnav js -->
-    <script type="text/javascript" src="@Url.Content("~/Static/js/bootsnav.js")"></script>
-
-    <!-- JS Implementing Plugins -->
-    <script type="text/javascript" src="@Url.Content("~/Static/libs/jquery.isotope/isotope.pkgd.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Static/js/isotope-active.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Static/libs/jquery.fancybox/jquery.fancybox.min.js")"></script>
-
-    <script type="text/javascript" src="@Url.Content("~/Static/libs/jquery.scrollup/jquery.scrollUp.min.js")"></script>
-
-    <script type="text/javascript" src="@Url.Content("~/Static/js/main.js")"></script>
+    @Scripts.Render("~/Bundles/js")
 
     @RenderSection("Scripts", required: false)
 </body>
