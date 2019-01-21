@@ -218,6 +218,7 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
     <Compile Include="Business\ExtensionMethods\ContentExtensions.cs" />
+    <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Controllers\_PageControllerBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -328,6 +329,8 @@
     <Content Include="Static\font\GillSansMT-UltraBold.ttf" />
     <Content Include="Static\font\GillSansMT-UltraBold.woff" />
     <Content Include="Views\Shared\Layouts\_Layout.cshtml" />
+    <Content Include="Views\StartPage\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
