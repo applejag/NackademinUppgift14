@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
 // Loading
 //=========================================
 
-    $(window).load(function () {
+    $(window).on("load", function () {
         $("#loading").fadeOut(500);
     });
 
