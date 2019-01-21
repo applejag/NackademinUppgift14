@@ -234,7 +234,6 @@
     <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
-    <Folder Include="Static\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +241,40 @@
     <Content Include="App_Data\EPiServerDB_658e82f3_log.ldf">
       <DependentUpon>EPiServerDB_658e82f3.mdf</DependentUpon>
     </Content>
+    <Content Include="Static\css\bootsnav.css" />
+    <Content Include="Static\css\custom.css" />
+    <Content Include="Static\css\fonts.css" />
+    <Content Include="Static\font\futuralt-bold-webfont.svg" />
+    <Content Include="Static\font\futuralt-book-webfont.svg" />
+    <Content Include="Static\font\GillSansMT-UltraBold.svg" />
+    <Content Include="Static\images\about_bg.png" />
+    <Content Include="Static\images\fancy-img\blank.gif" />
+    <Content Include="Static\images\fancy-img\fancybox_loading%402x.gif" />
+    <Content Include="Static\images\fancy-img\fancybox_loading.gif" />
+    <Content Include="Static\images\fancy-img\fancybox_overlay.png" />
+    <Content Include="Static\images\fancy-img\fancybox_sprite.png" />
+    <Content Include="Static\images\footer_bg.jpg" />
+    <Content Include="Static\images\highligh_img.jpg" />
+    <Content Include="Static\images\logo.png" />
+    <Content Include="Static\images\man.png" />
+    <Content Include="Static\images\portfolio1.jpg" />
+    <Content Include="Static\images\portfolio2.jpg" />
+    <Content Include="Static\images\portfolio3.jpg" />
+    <Content Include="Static\images\portfolio4.jpg" />
+    <Content Include="Static\images\portfolio_bg.jpg" />
+    <Content Include="Static\images\service_img1.jpg" />
+    <Content Include="Static\images\service_img2.jpg" />
+    <Content Include="Static\images\service_img3.jpg" />
+    <Content Include="Static\images\slider_img.jpg" />
+    <Content Include="Static\images\slider_img2.jpg" />
+    <Content Include="Static\images\slider_img3.jpg" />
+    <Content Include="Static\images\testimonial_bg.jpg" />
+    <Content Include="Static\images\testimonial_img1.png" />
+    <Content Include="Static\images\testimonial_img2.png" />
+    <Content Include="Static\images\top.png" />
+    <Content Include="Static\js\bootsnav.js" />
+    <Content Include="Static\js\isotope-active.js" />
+    <Content Include="Static\js\main.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -253,7 +286,17 @@
     <Content Include="modules\_protected\CMS\CMS.zip" />
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\web.config" />
     <Content Include="modules\_protected\EPiServer.Cms.TinyMce\EPiServer.Cms.TinyMce.zip" />
+    <Content Include="libman.json" />
     <None Include="packages.config" />
+    <Content Include="Static\font\futuralt-bold-webfont.eot" />
+    <Content Include="Static\font\futuralt-bold-webfont.ttf" />
+    <Content Include="Static\font\futuralt-bold-webfont.woff" />
+    <Content Include="Static\font\futuralt-book-webfont.eot" />
+    <Content Include="Static\font\futuralt-book-webfont.ttf" />
+    <Content Include="Static\font\futuralt-book-webfont.woff" />
+    <Content Include="Static\font\GillSansMT-UltraBold.eot" />
+    <Content Include="Static\font\GillSansMT-UltraBold.ttf" />
+    <Content Include="Static\font\GillSansMT-UltraBold.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

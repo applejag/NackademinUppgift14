@@ -5,6 +5,7 @@
 */[Mm]odules/
 */modulesbin/
 */App_Data/[Ii]ndex/
+*/Static/libs
 
 # User-specific files
 *.suo
