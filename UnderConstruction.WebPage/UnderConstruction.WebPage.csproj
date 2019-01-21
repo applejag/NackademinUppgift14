@@ -240,6 +240,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Blocks\CarouselBlock.cs" />
+    <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Pages\_SitePageData.cs" />
     <Compile Include="Models\ViewModels\_IPageViewModel.cs" />
@@ -249,7 +251,6 @@
     <Compile Include="SiteTabNames.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Blocks\" />
     <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
   </ItemGroup>
@@ -348,6 +349,8 @@
     <Content Include="Views\Shared\Layouts\_Layout.cshtml" />
     <Content Include="Views\StartPage\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\CarouselBlock.cshtml" />
+    <Content Include="Views\Shared\CarouselItemBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

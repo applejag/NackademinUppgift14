@@ -1,0 +1,41 @@
+﻿@using EPiServer.SpecializedProperties
+@model CarouselItemBlock
+
+@Html.FullRefreshPropertiesMetaData(new[] { "BackgroundImage", "BigHeader2", "Links" })
+
+<div class="item">
+    <div class="background" style="background-image: url(@Url.ContentUrl(Model.BackgroundImage))" @Html.EditAttributes(m => m.BackgroundImage)></div>
+    <div class="overlay">
+        <div class="carousel-caption">
+            <h3 @Html.EditAttributes(m => m.SmallHeader)>
+                @Html.DisplayFor(m => m.SmallHeader)
+            </h3>
+            <h1 @Html.EditAttributes(m => m.BigHeader1)>
+                @Html.DisplayFor(m => m.BigHeader1)
+            </h1>
+            @if (Model.BigHeader2 != null)
+            {
+                <h1 class="second_heading" @Html.EditAttributes(m => m.BigHeader2)>
+                    @Html.DisplayFor(m => m.BigHeader2)
+                </h1>
+            }
+            else
+            {
+                <div @Html.EditAttributes(m => m.BigHeader2)>
+                    <small>there's no header 2</small>
+                </div>
+            }
+            <p @Html.EditAttributes(m => m.Paragraph)>
+                @Html.DisplayFor(m => m.Paragraph)
+            </p>
+            <div @Html.EditAttributes(m => m.Links)>
+                @foreach (LinkItem link in Model.Links)
+                {
+                    <a class="btn know_btn" href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
+                        @link.Text
+                    </a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
