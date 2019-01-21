@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using AlloyTraining;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;

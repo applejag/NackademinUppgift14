@@ -1,4 +1,4 @@
-﻿namespace AlloyTraining
+﻿namespace UnderConstruction.WebPage
 {
     public static class SiteGroupNames
     {

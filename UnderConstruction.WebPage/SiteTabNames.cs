@@ -2,7 +2,7 @@
 using EPiServer.DataAnnotations;
 using EPiServer.Security;
 
-namespace AlloyTraining
+namespace UnderConstruction.WebPage
 {
     [GroupDefinitions]
     public static class SiteTabNames
