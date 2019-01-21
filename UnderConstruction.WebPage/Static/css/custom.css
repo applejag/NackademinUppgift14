@@ -782,7 +782,7 @@ footer:after {
         height: 740px;
     }
     .carousel-caption {
-        padding: 18%;
+        padding: 10%;
         left: 0;
         right: 0;
         /*top: 95px;*/
@@ -790,8 +790,6 @@ footer:after {
     .about_content {
         margin-right: 50px;
     }
-
-
 }
 
 @media (max-width: 1199px) {
