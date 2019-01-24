@@ -10,7 +10,8 @@ namespace UnderConstruction.WebPage.Models.Blocks
 {
     [ContentType(DisplayName = "CarouselItemBlock",
         GUID = "a2d34a78-31c9-4584-9c54-936803ca6ec5",
-        Description = "")]
+        Description = "",
+        AvailableInEditMode = false)]
     public class CarouselItemBlock : BlockData
     {
         [CultureSpecific]
