@@ -1,0 +1,15 @@
+﻿@model ContentAreaBlock
+
+<section>
+    <div class="container">
+        @if (Model.ContentArea != null)
+        {
+            <h2 @Html.EditAttributes(m => m.Heading)>
+                @Html.DisplayFor(m => m.Heading)
+            </h2>
+        }
+        <div class="row" @Html.EditAttributes(m => m.ContentArea)>
+            @Html.DisplayFor(m => m.ContentArea)
+        </div>
+    </div>
+</section>

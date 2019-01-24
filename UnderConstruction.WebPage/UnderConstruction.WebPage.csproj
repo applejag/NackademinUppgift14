@@ -247,6 +247,7 @@
     <Compile Include="Models\Blocks\CarouselBlock.cs" />
     <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
     <Compile Include="Models\Blocks\SingleQuality.cs" />
+    <Compile Include="Models\Blocks\ContentAreaBlock.cs" />
     <Compile Include="Models\Blocks\TeaserBlock.cs" />
     <Compile Include="Models\Media\AnyFile.cs" />
     <Compile Include="Models\Media\ImageFile.cs" />
@@ -367,6 +368,7 @@
     <Content Include="Views\TeaserBlockNarrow\Index.cshtml" />
     <Content Include="Views\TeaserBlockWide\Index.cshtml" />
     <Content Include="Views\TeaserBlock\Index.cshtml" />
+    <Content Include="Views\Shared\ContentAreaBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
