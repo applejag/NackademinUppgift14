@@ -239,7 +239,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     color:#ffcb0f;
     margin-bottom:35px;
 }
-.carousel-caption > h3 {
+.carousel-caption h3 {
     color: #fff;
     font-family: "futura_ltbook",sans-serif;
     font-size: 40px;
@@ -247,7 +247,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     margin-bottom: 30px;
     text-transform: inherit;
 }
-.carousel-caption > p {
+.carousel-caption p {
     font-size: 23px;
     line-height: 28px;
 }
@@ -919,11 +919,11 @@ footer:after {
     .carousel-inner > .item {
         height: 450px;
     }
-    .carousel-caption > h3 {
+    .carousel-caption h3 {
         font-size: 26px;
         margin-bottom: 10px;
     }
-    .carousel-caption > p {
+    .carousel-caption p {
         font-size: 18px;
         line-height: 22px;
     }
@@ -996,11 +996,11 @@ footer:after {
     .carousel-caption h1.second_heading {
         margin-bottom: 10px;
     }
-    .carousel-caption > h3 {
+    .carousel-caption h3 {
         font-size: 20px;
         margin-bottom: 10px;
     }
-    .carousel-caption > p {
+    .carousel-caption p {
         font-size: 16px;
         line-height: 20px;
     }
