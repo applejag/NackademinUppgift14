@@ -1,0 +1,13 @@
+﻿@model TeaserBlockViewModel
+
+<div class="col-md-4">
+    <div class="service_item">
+        @Html.PropertyFor(m => m.CurrentBlock.TeaserImage)
+        <h3>
+            @Html.DisplayFor(m => m.CurrentBlock.TeaserHeading)
+        </h3>
+        @Html.PropertyFor(m => m.CurrentBlock.TeaserText)
+        <a href="#services" class="btn know_btn">know more</a>
+        @Html.PropertyFor(m => m.CurrentBlock.TeaserLink)
+    </div>
+</div>
