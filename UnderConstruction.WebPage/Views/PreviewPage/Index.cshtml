@@ -1,0 +1,76 @@
+﻿@using System.Web.Optimization
+@model PreviewPageViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>@(Model.CurrentPage.MetaTitle ?? Model.CurrentPage.Name)</title>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    @Styles.Render("~/Bundles/css")
+    <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!-- Preloader -->
+
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="well well-lg">
+            <div class="row">
+                <div class="alert alert-info">Display Option: Full (default)</div>
+            </div>
+            <div class="row">
+                @Html.PropertyFor(m => m.PreviewArea, new { Tag = SiteTags.Full })
+            </div>
+        </div>
+        <div class="well well-lg">
+            <div class="row">
+                <div class="alert alert-info col-xs-8">Display Option: Wide</div>
+            </div>
+            <div class="row">
+                @Html.PropertyFor(m => m.PreviewArea, new { Tag = SiteTags.Wide })
+            </div>
+        </div>
+        <div class="well well-lg">
+            <div class="row">
+                <div class="alert alert-info col-xs-4">Display Option: Narrow</div>
+            </div>
+            <div class="row">
+                @Html.PropertyFor(m => m.PreviewArea, new { Tag = SiteTags.Narrow })
+            </div>
+        </div>
+    </div>
+
+
+    @Scripts.Render("~/Bundles/js")
+
+</body>
+</html>	

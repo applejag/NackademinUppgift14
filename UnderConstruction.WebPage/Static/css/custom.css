@@ -365,8 +365,9 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     margin: 85px 0 50px;
     text-align:center;
 }
-.service_item > h3 {
+.service_item h2 {
     margin: 25px 0 15px;
+    color: #ffcb0f;
 }
 .service_item .btn.know_btn {
     margin: 20px 0 100px;
