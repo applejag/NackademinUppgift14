@@ -32,13 +32,6 @@ namespace UnderConstruction.WebPage.Models.Pages
             Order = 20)]
         public virtual XhtmlString MainBody { get; set; }
 
-        [Display(
-            Name = "Main carousel",
-            Description = "Create carousel items and add to this block to fill out the carousel.",
-            GroupName = SystemTabNames.Content,
-            Order = 25)]
-        public virtual CarouselBlock MainCarousel { get; set; }
-
         [CultureSpecific]
         [Display(
             Name = "Main Content Area",
