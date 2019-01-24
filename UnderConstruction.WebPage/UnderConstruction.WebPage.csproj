@@ -237,7 +237,9 @@
     <Compile Include="Business\Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
     <Compile Include="Business\Rendering\MyContentAreaRenderer.cs" />
+    <Compile Include="SiteTags.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
+    <Compile Include="Controllers\TeaserBlockController.cs" />
     <Compile Include="Controllers\_PageControllerBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
