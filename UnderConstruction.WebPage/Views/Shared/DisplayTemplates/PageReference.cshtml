@@ -1,0 +1,15 @@
+﻿@using EPiServer.SpecializedProperties
+@using UnderConstruction.WebPage.Business.ExtensionMethods
+@model EPiServer.Core.PageReference
+
+@{
+    string classes = ViewData["class"] as string ??
+                     ViewData["CssClass"] as string;
+}
+
+@if (Model != null)
+{
+    <a class="@classes" href="@Url.ContentUrl(Model)">
+        @(Model.Get<SitePageData>().Name)
+    </a>
+}
