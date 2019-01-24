@@ -36,20 +36,11 @@
                     <small>there's no header 2</small>
                 </div>
             }
-            <p @Html.EditAttributes(m => m.Paragraph)>
+            <div @Html.EditAttributes(m => m.Paragraph)>
                 @Html.DisplayFor(m => m.Paragraph)
-            </p>
+            </div>
             <div @Html.EditAttributes(m => m.Links)>
-                @if (Model.Links != null)
-                {
-                    foreach (LinkItem link in Model.Links)
-                    {
-                        <a class="btn know_btn" href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
-                            @link.Text
-                        </a>
-                    }
-                }
-                <a class="btn know_btn">know more</a>
+                @Html.DisplayFor(m => m.Links, new { ChildrenCssClass = "btn know_btn"})
             </div>
         </div>
     </div>
