@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 using UnderConstruction.WebPage.Models.Media;
 
 namespace UnderConstruction.WebPage.Models.Blocks
@@ -32,13 +33,15 @@ namespace UnderConstruction.WebPage.Models.Blocks
         [Display(Name = "Background image",
             GroupName = SystemTabNames.Content,
             Order = 40)]
-        public virtual ImageFile ImageBackground { get; set; }
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference ImageBackground { get; set; }
 
         [Required]
         [Display(Name = "Foreground image",
             GroupName = SystemTabNames.Content,
             Order = 50)]
-        public virtual ImageFile ImageForeground { get; set; }
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference ImageForeground { get; set; }
 
         [Display(Name = "Links",
             GroupName = SystemTabNames.Content,
