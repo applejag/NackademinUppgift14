@@ -1,17 +1,16 @@
 ﻿@using EPiServer.SpecializedProperties
-@model System.Web.UI.WebControls.ListItemCollection
+@model LinkItemCollection
 
 @{
     string classes = ViewData["class"] as string ??
                      ViewData["ChildrenCssClass"] as string;
-    string classTag = classes != null ? string.Format("class=\"{0}\"", classes) : null;
 }
 
 @if (Model != null)
 {
     foreach (LinkItem link in Model)
     {
-        <a @classTag href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
+        <a class="@classes" href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
             @link.Text
         </a>
     }
