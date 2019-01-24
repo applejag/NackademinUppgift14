@@ -247,7 +247,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blocks\FourQualitiesBlock.cs" />
-    <Compile Include="Models\Blocks\AboutBlock.cs" />
     <Compile Include="Models\Blocks\CarouselBlock.cs" />
     <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
     <Compile Include="Models\Blocks\SingleQuality.cs" />
@@ -366,7 +365,6 @@
     <Content Include="Views\Shared\CarouselBlock.cshtml" />
     <Content Include="Views\Shared\CarouselItemBlock.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\LinkItemCollection.cshtml" />
-    <Content Include="Views\Shared\AboutBlock.cshtml" />
     <Content Include="Views\Shared\FourQualitiesBlock.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SingleQuality.cshtml" />
     <Content Include="Views\TeaserBlockNarrow\Index.cshtml" />
