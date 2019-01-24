@@ -242,6 +242,9 @@
     </Compile>
     <Compile Include="Models\Blocks\CarouselBlock.cs" />
     <Compile Include="Models\Blocks\CarouselItemBlock.cs" />
+    <Compile Include="Models\Media\AnyFile.cs" />
+    <Compile Include="Models\Media\ImageFile.cs" />
+    <Compile Include="Models\Media\SvgFile.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
     <Compile Include="Models\Pages\_SitePageData.cs" />
     <Compile Include="Models\ViewModels\_IPageViewModel.cs" />
@@ -251,7 +254,6 @@
     <Compile Include="SiteTabNames.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Media\" />
     <Folder Include="Models\Properties\" />
   </ItemGroup>
   <ItemGroup>
