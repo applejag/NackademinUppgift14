@@ -13,6 +13,6 @@ namespace UnderConstruction.WebPage.Models.Blocks
         [CultureSpecific]
         [Display(Name = "Carousel items")]
         [AllowedTypes(typeof(CarouselItemBlock))]
-        public virtual IList<ContentReference> Items { get; set; }
+        public virtual ContentArea CarouselItems { get; set; }
     }
 }

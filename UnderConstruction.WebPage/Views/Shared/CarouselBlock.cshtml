@@ -6,14 +6,9 @@
     <!-- Carousel -->
     <div class="carousel slide" data-ride="carousel">
         <!-- Carousel-inner -->
-        <div class="carousel-inner" role="listbox">
-            @if (Model.Items != null)
-            {
-                for (var i = 0; i < Model.Items.Count; i++)
-                {
-                    @Html.PropertyFor(m => m.Items[i])
-                }
-            }
+        <div class="carousel-inner" role="listbox"
+             @Html.EditAttributes(m => m.CarouselItems)>
+            @Html.DisplayFor(m => m.CarouselItems)
         </div><!-- Carousel-inner end -->
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
