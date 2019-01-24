@@ -779,7 +779,7 @@ footer:after {
 /* Responsive Styles for various devices */
 @media (min-width: 1600px) {
     .container{ width: 1200px;}
-    .carousel-inner > .item {
+    .carousel-inner .item {
         height: 740px;
     }
     .carousel-caption {
@@ -801,7 +801,7 @@ footer:after {
     h2 {
         font-size: 25px;
     }
-    .carousel-inner > .item {
+    .carousel-inner .item {
         height: 550px;
     }
     .carousel-caption {
@@ -916,7 +916,7 @@ footer:after {
     .carousel-caption {
         top: 20px;
     }
-    .carousel-inner > .item {
+    .carousel-inner .item {
         height: 450px;
     }
     .carousel-caption h3 {
@@ -987,8 +987,9 @@ footer:after {
         width: 100%;
         padding: 0 8px;
     }
-    .carousel-inner > .item {
-        height: 420px;
+    .carousel-inner .item {
+        /*height: 420px;*/
+        height: 450px;
     }
     .carousel-caption {
         top: 5px;
