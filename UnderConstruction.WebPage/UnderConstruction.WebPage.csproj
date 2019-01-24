@@ -227,6 +227,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\DependencyResolvers\DependencyResolverInitialization.cs" />
     <Compile Include="Business\DependencyResolvers\StructureMapDependencyResolver.cs" />
     <Compile Include="Business\ExtensionMethods\ContentExtensions.cs" />
     <Compile Include="Business\ExtensionMethods\HtmlHelperExtensions.cs" />
@@ -235,6 +236,7 @@
     <Compile Include="Business\Initialization\BundleConfig.cs" />
     <Compile Include="Business\Initialization\RegisterAdminInitializationModule.cs" />
     <Compile Include="Business\Initialization\RegisterDependencyResolverInitializationModule.cs" />
+    <Compile Include="Business\Rendering\MyContentAreaRenderer.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Controllers\_PageControllerBase.cs" />
     <Compile Include="Global.asax.cs">

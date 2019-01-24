@@ -1,9 +1,15 @@
-﻿@using EPiServer.SpecializedProperties
+﻿@using EPiServer.Core
+@using EPiServer.SpecializedProperties
 @model CarouselItemBlock
 
 @Html.FullRefreshPropertiesMetaData(new[] { "BackgroundImage", "BigHeader2", "Links" })
 
-<div class="item">
+@{
+    var first = ViewData["first"] as int?;
+    var b = Model as IContent;
+    string active = b != null && first.HasValue && b.ContentLink.ID == first.Value ? "active" : null;
+}
+<div class="item @active">
     <div class="background" style="background-image: url(@Url.ContentUrl(Model.BackgroundImage))" @Html.EditAttributes(m => m.BackgroundImage)></div>
     <div class="overlay">
         <div class="carousel-caption">
@@ -29,12 +35,16 @@
                 @Html.DisplayFor(m => m.Paragraph)
             </p>
             <div @Html.EditAttributes(m => m.Links)>
-                @foreach (LinkItem link in Model.Links)
+                @if (Model.Links != null)
                 {
-                    <a class="btn know_btn" href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
-                        @link.Text
-                    </a>
+                    foreach (LinkItem link in Model.Links)
+                    {
+                        <a class="btn know_btn" href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
+                            @link.Text
+                        </a>
+                    }
                 }
+                <a class="btn know_btn">know more</a>
             </div>
         </div>
     </div>

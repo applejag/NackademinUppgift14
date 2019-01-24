@@ -196,6 +196,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     position: relative;
     /*height: 700px;*/
     display: inline-block;
+    width: 100%;
 }
 .home .carousel .item .background {
     width:100%;
