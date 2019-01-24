@@ -357,6 +357,7 @@
     <Content Include="Views\Shared\CarouselBlock.cshtml" />
     <Content Include="Views\Shared\CarouselItemBlock.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\LinkItemCollection.cshtml" />
+    <Content Include="Views\Shared\AboutBlock.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
