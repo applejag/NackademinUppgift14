@@ -1,0 +1,13 @@
+﻿@model SingleQuality
+
+<div class="col-md-3 col-sm-6">
+    <div class="why_us_item">
+        <span class="fa fa-@Model.Icon"></span>
+        <h4 @Html.EditAttributes(m => m.Title)>
+            @Html.DisplayFor(m => m.Title)
+        </h4>
+        <p @Html.EditAttributes(m => m.Description)>
+            @Html.DisplayFor(m => m.Description)
+        </p>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿@model UnderConstruction.WebPage.Models.Blocks.FourQualitiesBlock
+
+<!-- Why us -->
+<section class="why_us">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="head_title">
+                    <h2 @Html.EditAttributes(m => m.Heading)>
+                        @Html.DisplayFor(m => m.Heading)
+                    </h2>
+                    <div @Html.EditAttributes(m => m.Description)>
+                        @Html.DisplayFor(m => m.Description)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @Html.PropertyFor(m => m.Quality1)
+            @Html.PropertyFor(m => m.Quality2)
+            @Html.PropertyFor(m => m.Quality3)
+            @Html.PropertyFor(m => m.Quality4)
+        </div>
+    </div>
+</section><!-- Why us end -->

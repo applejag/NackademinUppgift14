@@ -320,16 +320,16 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 
 /* Why us */
-#why_us {
+.why_us {
     background: #f2f7fa none repeat scroll 0 0;
     padding-bottom: 50px;
     line-height: 18px;
 }
-#why_us h2 {
+.why_us h2 {
     margin: 70px 0 20px;
 }
 .why_us_item{ padding-top: 55px;}
-#why_us .fa {
+.why_us .fa {
     -ms-border-radius: 100%;
     border-radius: 100%;
     box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
