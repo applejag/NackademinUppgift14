@@ -361,7 +361,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 
 /* Services */
-#services h2 {
+.services h2 {
     margin: 85px 0 50px;
     text-align:center;
 }
