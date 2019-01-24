@@ -9,7 +9,7 @@ using UnderConstruction.WebPage.Models.Pages;
 
 namespace UnderConstruction.WebPage.Controllers
 {
-    public class StandardPageController : PageControllerBase<ServicePage>
+    public class StandardPageController : PageControllerBase<StandardPage>
     {
         public StandardPageController(IContentLoader loader) : base(loader)
         {
