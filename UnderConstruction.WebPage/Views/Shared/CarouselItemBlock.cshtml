@@ -8,6 +8,11 @@
     var first = ViewData["first"] as int?;
     var b = Model as IContent;
     string active = b != null && first.HasValue && b.ContentLink.ID == first.Value ? "active" : null;
+
+    if (active == null && first.HasValue && EPiServer.Editor.PageEditing.PageIsInEditMode)
+    {
+        active = "hidden";
+    }
 }
 <div class="item @active">
     <div class="background" style="background-image: url(@Url.ContentUrl(Model.BackgroundImage))" @Html.EditAttributes(m => m.BackgroundImage)></div>
