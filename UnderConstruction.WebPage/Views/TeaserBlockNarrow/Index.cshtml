@@ -3,11 +3,10 @@
 <div class="col-md-4">
     <div class="service_item">
         @Html.PropertyFor(m => m.CurrentBlock.TeaserImage)
-        <h3>
+        <h2 @Html.EditAttributes(m => m.CurrentBlock.TeaserHeading)>
             @Html.DisplayFor(m => m.CurrentBlock.TeaserHeading)
-        </h3>
+        </h2>
         @Html.PropertyFor(m => m.CurrentBlock.TeaserText)
-        <a href="#services" class="btn know_btn">know more</a>
-        @Html.PropertyFor(m => m.CurrentBlock.TeaserLink)
+        @Html.PropertyFor(m => m.CurrentBlock.TeaserLink, new { CssClass = "btn know_btn" })
     </div>
 </div>
