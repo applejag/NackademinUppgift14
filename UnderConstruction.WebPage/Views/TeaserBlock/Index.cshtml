@@ -2,8 +2,8 @@
 
 <section>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-7 col-md-6">
+        <div class="row vertical-bottom">
+            <div class="col-lg-7 col-md-6 col-sm-7">
                 <div class="about_content">
                     <h2 @Html.EditAttributes(m => m.CurrentBlock.TeaserHeading)>
                         @Html.DisplayFor(m => m.CurrentBlock.TeaserHeading)
@@ -12,11 +12,11 @@
                         @Html.DisplayFor(m => m.CurrentBlock.TeaserText)
                     </div>
                     <div @Html.EditAttributes(m => m.CurrentBlock.TeaserLink)>
-                        @Html.DisplayFor(m => m.CurrentBlock.TeaserLink, new { ChildrenCssClass = "btn know_btn" })
+                        @Html.DisplayFor(m => m.CurrentBlock.TeaserLink, new { CssClass = "btn know_btn" })
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-lg-offset-1">
+            <div class="col-lg-5 col-md-6 col-sm-7">
                 <div class="about_banner" @Html.EditAttributes(m => m.CurrentBlock.TeaserImage)>
                     @Html.DisplayFor(m => m.CurrentBlock.TeaserImage)
                 </div>

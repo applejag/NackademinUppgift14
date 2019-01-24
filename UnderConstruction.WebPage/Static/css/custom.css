@@ -129,7 +129,25 @@ a:hover,a:focus{ text-decoration: none}
 /*End off Preloader*/
 
 
+/* Extra small devices (767px and down) */
+@media (max-width: 767px) {
+    .row.vertical-middle,
+    .row.vertical-bottom {
+        display: block; /* Turn off the flexible box layout */
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .row.vertical-middle {
+        display: flex;
+        align-items: center;
+    }
 
+    .row.vertical-bottom {
+        display: flex;
+        align-items: flex-end;
+    }
+}
 
 
 /* Top Nav */
@@ -809,7 +827,7 @@ footer:after {
     }
 
     .about_banner img {
-        width: 334px;
+        /*width: 334px;*/
         display:block;
         margin:0 auto;
     }
