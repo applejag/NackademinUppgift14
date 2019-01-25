@@ -1,7 +1,7 @@
 ﻿@model IPageViewModel<ServicePage>
 
 <section class="container">
-    <h1 @Html.EditAttributes(m => m.CurrentPage.Heading)>
+    <h1 class="heading" @Html.EditAttributes(m => m.CurrentPage.Heading)>
         @(Model.CurrentPage.Heading ?? Model.CurrentPage.MetaTitle ?? Model.CurrentPage.Name)
     </h1>
     <div class="row">
