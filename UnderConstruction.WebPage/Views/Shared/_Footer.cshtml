@@ -37,13 +37,16 @@
                         @Html.DisplayFor(m => m.StartPage.FooterExploreTitle)
                     </h4>
                     <ul class="list-unstyled footer_menu" @Html.EditAttributes(m => m.StartPage.FooterExploreLinks)>
-                        @foreach (LinkItem link in Model.StartPage.FooterExploreLinks)
+                        @if (Model.StartPage.FooterExploreLinks != null)
                         {
-                            <li>
-                                <a href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
-                                    <span class="fa fa-play"> @link.Text</span>
-                                </a>
-                            </li>
+                            foreach (LinkItem link in Model.StartPage.FooterExploreLinks)
+                            {
+                                <li>
+                                    <a href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
+                                        <span class="fa fa-play"> @link.Text</span>
+                                    </a>
+                                </li>
+                            }
                         }
                     </ul>
                 </div>
