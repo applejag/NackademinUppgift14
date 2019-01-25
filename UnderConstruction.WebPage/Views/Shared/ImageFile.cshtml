@@ -1,0 +1,36 @@
+﻿@model UnderConstruction.WebPage.Models.Media.ImageFile
+
+@{
+    string tag = ViewData["Tag"] as string ?? SiteTags.Full;
+}
+
+@functions
+{
+    string GetSizeClass(string tag)
+    {
+        switch (tag)
+        {
+            case SiteTags.Narrow:
+                return "col-md-4";
+
+            case SiteTags.Wide:
+                return "col-md-8";
+
+            default:
+            case SiteTags.Full:
+                return "col-md-12";
+        }
+    }
+}
+
+<div class="@GetSizeClass(tag)">
+    <figure class="thumbnail">
+        <img src="@Url.ContentUrl(Model.ContentLink)" alt="@(Model.Description ?? Model.Name)" />
+        @if (Model.Description != null)
+        {
+            <figcaption>
+                @Html.PropertyFor(m => m.Description)
+            </figcaption>
+        }
+    </figure>
+</div>
