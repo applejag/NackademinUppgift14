@@ -1,5 +1,10 @@
 ﻿@using System.Web.Optimization
 @model IPageViewModel<SitePageData>
+@{
+    string title = Model.CurrentPage.PageLink.ID == Model.StartPage.PageLink.ID
+        ? Model.StartPage.CompanyName
+        : string.Format("{0} · {1}", Model.CurrentPage.Name, Model.StartPage.CompanyName);
+}
 
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -8,7 +13,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>Construction</title>
+    <title>@Html.Raw(title)</title>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     @Styles.Render("~/Bundles/css")
