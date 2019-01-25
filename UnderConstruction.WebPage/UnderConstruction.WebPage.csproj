@@ -241,6 +241,7 @@
     <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\ServicePageController.cs" />
+    <Compile Include="Models\Blocks\ContactBlock.cs" />
     <Compile Include="Models\Blocks\WorkSpecsBlock.cs" />
     <Compile Include="Models\Pages\ServicePage.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />

@@ -29,6 +29,15 @@ a:hover,a:focus{ text-decoration: none}
 
 /* Header */
 
+.brand h1 {
+    color: #ffcb0f;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    font-style: italic;
+}
+
 
 /*Preloader css*/
 #loading{

@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 using UnderConstruction.WebPage.Models.Blocks;
 
 namespace UnderConstruction.WebPage.Models.Pages
@@ -25,10 +26,59 @@ namespace UnderConstruction.WebPage.Models.Pages
         //[AllowedTypes(typeof(StandardPage), typeof(BlockData), typeof(ImageData), typeof(ContentFolder))]
         public virtual ContentArea MainContentArea { get; set; }
 
+
         [CultureSpecific]
-        [Display(Name = "Footer text",
-            Description = "The footer text will be shown at the bottom of every page.",
+        [Display(Name = "Company name",
+            Description = "The name of the company. Used in header, title and footer.",
             GroupName = SiteTabNames.SiteSettings, Order = 10)]
-        public virtual string FooterText { get; set; }
+        public virtual string CompanyName { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Company tagline",
+            Description = "Tagline/slogan used in the header.",
+            GroupName = SiteTabNames.SiteSettings, Order = 20)]
+        public virtual string CompanyTagline { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: About company title",
+            GroupName = SiteTabNames.SiteSettings, Order = 50)]
+        public virtual string FooterAboutTitle { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: About company description",
+            GroupName = SiteTabNames.SiteSettings, Order = 51)]
+        [UIHint(UIHint.Textarea)]
+        public virtual string FooterAboutDescription { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: explore links title",
+            GroupName = SiteTabNames.SiteSettings, Order = 60)]
+        public virtual string FooterExploreTitle { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: latest posts title",
+            GroupName = SiteTabNames.SiteSettings, Order = 70)]
+        public virtual string FooterLatestTitle { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: contact us title",
+            GroupName = SiteTabNames.SiteSettings, Order = 80)]
+        public virtual string FooterContactTitle { get; set; }
+
+        [Display(Name = "Contact us details",
+            GroupName = SiteTabNames.SiteSettings, Order = 90)]
+        public virtual ContactBlock FooterContact { get; set; }
+
+        public override void SetDefaultValues(ContentType contentType)
+        {
+            base.SetDefaultValues(contentType);
+
+            CompanyName = "Under Construction";
+            CompanyTagline = "Take a break. Have some construction.";
+            FooterAboutTitle = "About Company";
+            FooterExploreTitle = "Explore links";
+            FooterLatestTitle = "Latest posts";
+            FooterContactTitle = "Contact us";
+        }
     }
 }
