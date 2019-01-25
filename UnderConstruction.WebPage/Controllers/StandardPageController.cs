@@ -15,7 +15,7 @@ namespace UnderConstruction.WebPage.Controllers
         {
         }
 
-        public ActionResult Index(ServicePage currentPage)
+        public ActionResult Index(StandardPage currentPage)
         {
             return View(CreatePageViewModel(currentPage));
         }
