@@ -5,11 +5,11 @@
 @Html.FullRefreshPropertiesMetaData(new[] { "BackgroundImage", "BigHeader2", "Links" })
 
 @{
-    var first = ViewData["first"] as int?;
-    var b = Model as IContent;
-    string active = b != null && first.HasValue && b.ContentLink.ID == first.Value ? "active" : null;
+    var isFirst = ViewData["isFirst"] as Func<bool>;
+    bool first = isFirst != null && isFirst();
+    string active = first ? "active" : null;
 
-    if (active == null && first.HasValue && EPiServer.Editor.PageEditing.PageIsInEditMode)
+    if (!first && EPiServer.Editor.PageEditing.PageIsInEditMode)
     {
         active = "hidden";
     }
@@ -40,7 +40,7 @@
                 @Html.DisplayFor(m => m.Paragraph)
             </div>
             <div @Html.EditAttributes(m => m.Links)>
-                @Html.DisplayFor(m => m.Links, new { ChildrenCssClass = "btn know_btn"})
+                @Html.DisplayFor(m => m.Links, new { ChildrenCssClass = "btn know_btn" })
             </div>
         </div>
     </div>

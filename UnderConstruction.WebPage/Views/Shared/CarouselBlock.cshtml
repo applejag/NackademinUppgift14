@@ -4,16 +4,17 @@
 
 @{
     string carouselId = Guid.NewGuid().ToString("N");
+    var first = true;
 
-    int? first = null;
-    if (Model.CarouselItems != null)
+    Func<bool> isFirst = () => 
     {
-        var item = Model.CarouselItems.FilteredItems.FirstOrDefault();
-        if (item != null)
+        if (first)
         {
-            first = item.ContentLink.ID;
+            first = false;
+            return true;
         }
-    }
+        return false;
+    };
 }
 
 <section class="home">
@@ -22,7 +23,7 @@
         <!-- Carousel-inner -->
         <div class="carousel-inner" role="listbox"
              @Html.EditAttributes(m => m.CarouselItems)>
-            @Html.DisplayFor(m => m.CarouselItems, new { first })
+            @Html.DisplayFor(m => m.CarouselItems, new { isFirst })
         </div><!-- Carousel-inner end -->
         <!-- Controls -->
         <a class="left carousel-control" href="#@carouselId" role="button" data-slide="prev">
