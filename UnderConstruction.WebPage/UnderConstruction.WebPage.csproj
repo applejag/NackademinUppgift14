@@ -388,6 +388,7 @@
     <Content Include="Views\StandardPage\Index.cshtml" />
     <Content Include="Views\ServicePage\Index.cshtml" />
     <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

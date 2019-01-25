@@ -56,6 +56,11 @@ namespace UnderConstruction.WebPage.Models.Pages
         public virtual string FooterExploreTitle { get; set; }
 
         [CultureSpecific]
+        [Display(Name = "Footer: explore links",
+            GroupName = SiteTabNames.SiteSettings, Order = 61)]
+        public virtual LinkItemCollection FooterExploreLinks { get; set; }
+
+        [CultureSpecific]
         [Display(Name = "Footer: latest posts title",
             GroupName = SiteTabNames.SiteSettings, Order = 70)]
         public virtual string FooterLatestTitle { get; set; }
