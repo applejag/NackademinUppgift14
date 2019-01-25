@@ -8,49 +8,99 @@
     </li>
 }
 
-<!-- Navbar -->
-<nav class="navbar bootsnav">
-    <!-- Top Search -->
-    <div class="top-search">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search">
-                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-            </div>
-        </div>
-    </div>
 
-    <div class="container">
-        <!-- Atribute Navigation -->
-        <div class="attr-nav">
-            <ul>
-                <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-            </ul>
-        </div>
-        <!-- Header Navigation -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand brand" href="@Url.ContentUrl(Model.StartPage.ContentLink)">
-                <h1 @Html.EditAttributes(m => m.StartPage.CompanyName)>
-                    @Html.DisplayFor(m => m.StartPage.CompanyName)
-                </h1>
-                <span class="text-muted" @Html.EditAttributes(m => m.StartPage.CompanyTagline)>
-                    @Html.DisplayFor(m => m.StartPage.CompanyTagline)
-                </span>
-            </a>
-        </div>
-        <!-- Navigation -->
-        <div class="collapse navbar-collapse" id="navbar-menu">
-            <ul class="nav navbar-nav menu">
-                @RenderLink(Model.StartPage)
-                @foreach (SitePageData page in Model.MenuPages)
+<!-- Header -->
+<header>
+    <!-- Top Navbar -->
+    <div class="top_nav">
+        <div class="container">
+            <ul class="list-inline info">
+                @if (Model.StartPage.FooterContactPhone != null)
                 {
-                    @RenderLink(page)
+                    <li>
+                        <a href="tel:@Model.StartPage.FooterContactPhone">
+                            <span class="fa fa-phone"></span>
+                            <span @Html.EditAttributes(m => m.StartPage.FooterContactPhone)>
+                                @Html.DisplayFor(m => m.StartPage.FooterContactPhone)
+                            </span>
+                        </a>
+                    </li>
+                }
+                @if (Model.StartPage.FooterContactEmail != null)
+                {
+                    <li>
+                        <a href="mailto:@Model.StartPage.FooterContactEmail">
+                            <span class="fa fa-envelope"></span>
+                            <span @Html.EditAttributes(m => m.StartPage.FooterContactEmail)>
+                                @Html.DisplayFor(m => m.StartPage.FooterContactEmail)
+                            </span>
+                        </a>
+                    </li>
+                }
+                @if (Model.StartPage.FooterContactOpeningHours != null)
+                {
+                    <li>
+                        <span class="fa fa-clock-o"></span>
+                        <span @Html.EditAttributes(m => m.StartPage.FooterContactOpeningHours)>
+                            @Html.DisplayFor(m => m.StartPage.FooterContactOpeningHours)
+                        </span>
+                    </li>
                 }
             </ul>
+            <ul class="list-inline social_icon">
+                <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                <li><a href=""><span class="fa fa-behance"></span></a></li>
+                <li><a href=""><span class="fa fa-dribbble"></span></a></li>
+                <li><a href=""><span class="fa fa-linkedin"></span></a></li>
+                <li><a href=""><span class="fa fa-youtube"></span></a></li>
+            </ul>
         </div>
-    </div>
-</nav><!-- Navbar end -->
+    </div><!-- Top Navbar end -->
+    <!-- Navbar -->
+    <nav class="navbar bootsnav">
+        <!-- Top Search -->
+        <div class="top-search">
+            <div class="container">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Atribute Navigation -->
+            <div class="attr-nav">
+                <ul>
+                    <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                </ul>
+            </div>
+            <!-- Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand brand" href="@Url.ContentUrl(Model.StartPage.ContentLink)">
+                    <h1 @Html.EditAttributes(m => m.StartPage.CompanyName)>
+                        @Html.DisplayFor(m => m.StartPage.CompanyName)
+                    </h1>
+                    <span class="text-muted" @Html.EditAttributes(m => m.StartPage.CompanyTagline)>
+                        @Html.DisplayFor(m => m.StartPage.CompanyTagline)
+                    </span>
+                </a>
+            </div>
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav menu">
+                    @RenderLink(Model.StartPage)
+                    @foreach (SitePageData page in Model.MenuPages)
+                    {
+                        @RenderLink(page)
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav><!-- Navbar end -->
+</header>

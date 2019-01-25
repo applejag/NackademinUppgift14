@@ -39,60 +39,7 @@
     </div>
 
     <!--End off Preloader -->
-    <!-- Header -->
-    <header>
-        <!-- Top Navbar -->
-        <div class="top_nav">
-            <div class="container">
-                @if (Model.StartPage.FooterContact != null)
-                {
-                    <ul class="list-inline info">
-                        @if (Model.StartPage.FooterContact.Phone != null)
-                        {
-                            <li>
-                                <a href="tel:@Model.StartPage.FooterContact.Phone">
-                                    <span class="fa fa-phone"></span>
-                                    <span @Html.EditAttributes(m => m.StartPage.FooterContact.Phone)>
-                                        @Html.DisplayFor(m => m.StartPage.FooterContact.Phone)
-                                    </span>
-                                </a>
-                            </li>
-                        }
-                        @if (Model.StartPage.FooterContact.Email != null)
-                        {
-                            <li>
-                                <a href="mailto:@Model.StartPage.FooterContact.Email">
-                                    <span class="fa fa-envelope"></span>
-                                    <span @Html.EditAttributes(m => m.StartPage.FooterContact.Email)>
-                                        @Html.DisplayFor(m => m.StartPage.FooterContact.Email)
-                                    </span>
-                                </a>
-                            </li>
-                        }
-                        @if (Model.StartPage.FooterContact.OpeningHours != null)
-                        {
-                            <li>
-                                <span class="fa fa-clock-o"></span>
-                                <span @Html.EditAttributes(m => m.StartPage.FooterContact.OpeningHours)>
-                                    @Html.DisplayFor(m => m.StartPage.FooterContact.OpeningHours)
-                                </span>
-                            </li>
-                        }
-                    </ul>
-                }
-                <ul class="list-inline social_icon">
-                    <li><a href=""><span class="fa fa-facebook"></span></a></li>
-                    <li><a href=""><span class="fa fa-twitter"></span></a></li>
-                    <li><a href=""><span class="fa fa-behance"></span></a></li>
-                    <li><a href=""><span class="fa fa-dribbble"></span></a></li>
-                    <li><a href=""><span class="fa fa-linkedin"></span></a></li>
-                    <li><a href=""><span class="fa fa-youtube"></span></a></li>
-                </ul>
-            </div>
-        </div><!-- Top Navbar end -->
-
-        @Html.Partial("_Navigation")
-    </header><!-- Header end -->
+    @Html.Partial("_Navigation")
 
     @RenderBody()
 

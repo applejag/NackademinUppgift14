@@ -70,9 +70,31 @@ namespace UnderConstruction.WebPage.Models.Pages
             GroupName = SiteTabNames.SiteSettings, Order = 80)]
         public virtual string FooterContactTitle { get; set; }
 
-        [Display(Name = "Contact us details",
-            GroupName = SiteTabNames.SiteSettings, Order = 90)]
-        public virtual ContactBlock FooterContact { get; set; }
+        [CultureSpecific]
+        [Display(Name = "Footer: contact us email",
+            GroupName = SiteTabNames.SiteSettings,
+            Order = 81)]
+        [DataType(DataType.EmailAddress)]
+        public virtual string FooterContactEmail { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: contact us location",
+            GroupName = SiteTabNames.SiteSettings,
+            Order = 82)]
+        public virtual string FooterContactLocation { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: contact us phone number",
+            GroupName = SiteTabNames.SiteSettings,
+            Order = 83)]
+        [DataType(DataType.PhoneNumber)]
+        public virtual string FooterContactPhone { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Footer: contact us phone open hours",
+            GroupName = SiteTabNames.SiteSettings,
+            Order = 84)]
+        public virtual string FooterContactOpeningHours { get; set; }
 
         public override void SetDefaultValues(ContentType contentType)
         {
