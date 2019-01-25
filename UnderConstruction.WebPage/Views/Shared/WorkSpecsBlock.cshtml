@@ -1,0 +1,43 @@
+﻿@model WorkSpecsBlock
+
+<div class="panel panel-default">
+    <div class="panel-heading">Specifications</div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th class="vertical-middle">
+                    @Html.DisplayNameFor(m => m.ServiceName)
+                </th>
+                <td>
+                    <h4 class="m-0" @Html.EditAttributes(m => m.ServiceName)>
+                        @Html.DisplayFor(m => m.ServiceName)
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <th class="vertical-middle">
+                    @Html.DisplayNameFor(m => m.CostStarting)
+                </th>
+                <td>
+                    <h4 class="text-success">
+                        <samp @Html.EditAttributes(m => m.CostStarting)>
+                            @Model.CostStarting.ToString("C")
+                        </samp>
+                    </h4>
+                </td>
+            </tr>
+            <tr>
+                <th class="vertical-middle">
+                    @Html.DisplayNameFor(m => m.CostMonthly)
+                </th>
+                <td>
+                    <h4 class="text-success">
+                        <samp @Html.EditAttributes(m => m.CostMonthly)>
+                            @Model.CostMonthly.ToString("C")
+                        </samp>
+                    </h4>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

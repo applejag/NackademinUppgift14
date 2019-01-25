@@ -40,6 +40,13 @@
                                 @page.MetaDescription
                             }
                         </div>
+                        @if (page is ServicePage)
+                        {
+                            var service = (ServicePage)page;
+                            <div style="margin-top: 16px;">
+                                @Html.Partial("WorkSpecsBlock", service.WorkSpecs)
+                            </div>
+                        }
                         <div>
                             <a class="btn know_btn" href="@Url.ContentUrl(page.PageLink)" title="Link to @page.Name page">
                                 Know more
