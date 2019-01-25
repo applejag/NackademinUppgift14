@@ -14,17 +14,20 @@ namespace UnderConstruction.WebPage.Models.Blocks
     public class SingleQuality : BlockData
     {
         [Required]
+        [CultureSpecific]
         [Display(Name = "Quality title",
             Order = 10)]
         public virtual string Title { get; set; }
 
         [Required]
+        [CultureSpecific]
         [Display(Name = "Quality description",
             Order = 20)]
         [UIHint(UIHint.Textarea)]
         public virtual string Description { get; set; }
 
         [Required]
+        [CultureSpecific]
         [Display(Name = "Quality icon name (font-awesome v3, without \"fa-\")",
             Order = 30)]
         public virtual string Icon { get; set; }

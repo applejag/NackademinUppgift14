@@ -17,11 +17,13 @@ namespace UnderConstruction.WebPage.Models.Blocks
         public const string QualitiesTab = "4 Qualities";
 
         [Required]
+        [CultureSpecific]
         [Display(Name = "Heading",
             GroupName = SystemTabNames.Content,
             Order = 10)]
         public virtual string Heading { get; set; }
 
+        [CultureSpecific]
         [Display(Name = "Content text",
             GroupName = SystemTabNames.Content,
             Order = 30)]

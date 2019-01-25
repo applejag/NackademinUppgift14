@@ -10,6 +10,7 @@ namespace UnderConstruction.WebPage.Models.Blocks
         Description = "Choose a page in the tree, and its children will be listed, with a heading.")]
     public class ListingBlock : BlockData
     {
+        [CultureSpecific]
         [Display(Name = "Heading", Order = 10)]
         public virtual string Heading { get; set; }
 

@@ -26,19 +26,23 @@ namespace UnderConstruction.WebPage.Models.Blocks
         public virtual ContentReference BackgroundImage { get; set; }
 
         [Required]
+        [CultureSpecific]
         [Display(Name = "Big header",
             Order = 20)]
         public virtual string BigHeader1 { get; set; }
 
+        [CultureSpecific]
         [Display(Name = "Big header 2",
             Order = 30)]
         public virtual string BigHeader2 { get; set; }
 
         [Required]
+        [CultureSpecific]
         [Display(Name = "Paragraph",
             Order = 40)]
         public virtual XhtmlString Paragraph { get; set; }
 
+        [CultureSpecific]
         [Display(Name = "Links",
             Order = 50)]
         public virtual LinkItemCollection Links { get; set; }
