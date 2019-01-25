@@ -1,4 +1,6 @@
-﻿@using EPiServer.SpecializedProperties
+﻿@using EPiServer.Core
+@using EPiServer.SpecializedProperties
+@using UnderConstruction.WebPage.Business.ExtensionMethods
 @model IPageViewModel<SitePageData>
 <!-- Footer -->
 <footer>
@@ -43,10 +45,30 @@
                             {
                                 <li>
                                     <a href="@Html.Raw(link.GetMappedHref())" target="@link.Target" title="@link.Title">
-                                        <span class="fa fa-play"> @link.Text</span>
+                                        <span class="fa fa-play"></span>
+                                        @link.Text
                                     </a>
                                 </li>
                             }
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <a href="@Url.Action(ContentReference.StartPage, "Logout")">
+                                    <span class="fa fa-play"></span>
+                                    Log out @User.Identity.Name
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a href="@FormsAuthentication.LoginUrl?ReturnUrl=@Url.Encode(Model.CurrentPage.PageLink.ExternalURLFromReference())">
+                                    <span class="fa fa-play"></span>
+                                    Log in
+                                </a>
+
+                            </li>
                         }
                     </ul>
                 </div>
